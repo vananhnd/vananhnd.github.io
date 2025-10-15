@@ -1,32 +1,23 @@
-import {Box, Container, Grid, Stack, Typography} from "@mui/material";
+import {Box, Grid, Stack, Typography} from "@mui/material";
 // import TechParticles from "./TechParticles.tsx";
 
 export default function TechStack() {
   return (
-    <Container maxWidth={'xl'} >
-      <Stack
-        data-aos="fade-up" data-aos-duration="1000"
-        gap={'50px'} py={{xs:5, md:20}} sx={{position: "relative", width: "100%", minHeight: "100vh"}}>
+    <section>
+      <Stack data-aos="fade-up" data-aos-duration="1000"
+        gap={'50px'}>
         <Stack sx={{position: "absolute", zIndex:-1,left:0, top:0, width: "100%", height: "100%", justifyContent:'center'}}>
-          {/*<TechParticles/>*/}
-          {/*<Box component={'img'} sx={{opacity:0.6}}*/}
-          {/*     src={"https://capsule-render.vercel.app/api?type=blur&height=500&color=gradient&reversal=true"}*/}
-          {/*/>*/}
           <Box component={'img'} sx={{opacity:0.6, transform:'scale(3)'}}
                src={"https://capsule-render.vercel.app/api?type=blur&color=0:999999,100:ffffff&height=100&reversal=true"}
           />
         </Stack>
-        <Typography variant={'h2'} fontWeight={'bold'} textAlign={'center'}>
+        <Typography variant={'title'}>
           Skills that fuel my passion
         </Typography>
         <Grid container spacing={3}>
           <Grid size={{xs: 12, sm: 6, md: 4}}>
             <Stack gap={3}>
-              <Stack className="skill-card"
-              // sx={{backgroundImage:'url(https://capsule-render.vercel.app/api?type=venom&color=0:EEFF0080,100:a82da880)',
-              // backgroundSize: 'cover', backgroundRepeat: 'repeat-x', backgroundPosition: 'center',
-              // }}
-              >
+              <Stack className="skill-card">
                 <Box className="skill-icons">
                   <Box component={'img'} src="https://skillicons.dev/icons?i=js" alt="js"/>
                   <Box component={'img'} src="https://skillicons.dev/icons?i=ts" alt="ts"/>
@@ -101,6 +92,6 @@ export default function TechStack() {
           </Grid>
         </Grid>
       </Stack>
-    </Container>
+    </section>
   )
 }

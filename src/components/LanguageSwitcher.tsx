@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
     //   <Button onClick={() => change('vi')}>VI</Button>
     // </ButtonGroup>
     <Box>
-      <IconButton sx={{padding:0}} aria-describedby={id} onClick={handleClickOpen}>
+      <IconButton aria-describedby={id} onClick={handleClickOpen}>
       <Language/>
       </IconButton>
       <Popover id={id}

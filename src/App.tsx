@@ -1,4 +1,3 @@
-import './App.css';
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import Home from "./pages/Home";
 import darkTheme from "./theme.ts";

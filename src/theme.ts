@@ -3,40 +3,62 @@ import React from "react";
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
-    poster: React.CSSProperties;
+    greeting: React.CSSProperties;
+    title: React.CSSProperties;
   }
 
   // allow configuration using `createTheme()`
   interface TypographyVariantsOptions {
-    poster?: React.CSSProperties;
+    greeting?: React.CSSProperties;
+    title?: React.CSSProperties;
   }
 }
 
 // Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
-    poster: true;
+    greeting: true;
+    title: true;
   }
 }
 const baseTheme = createTheme();
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    background: {
+      default: '#121212', // General background color
+      // paper: '#ffffff',   // Background color for Paper components
+    },
     primary: {
-      main: '#ccd0d5',
+      main: '#121212',
     },
     secondary: {
       main: '#edf2ff',
     },
     text: {
-      primary: '#ffffff',
+      primary: '#F5F5F5',
+      secondary: '#B0B0B0',
     }
   },
   typography: {
     fontFamily: 'Nunito, sans-serif',
-    poster: {
-      fontSize: 64,
-      color: 'red',
+    greeting: {
+      fontSize: '8rem',
+      fontWeight: 800,
+      textAlign: 'center',
+      lineHeight: 1.2,
+      [baseTheme.breakpoints.down('sm')]: {
+        fontSize: '3.5rem',
+      },
+    },
+    title: {
+      fontSize: '3.75rem',
+      fontWeight: 800,
+      textAlign: 'center',
+      lineHeight: 1.2,
+      [baseTheme.breakpoints.down('sm')]: {
+        fontSize: '3.5rem',
+      },
     },
     h3: {
       fontSize: '1.5rem',

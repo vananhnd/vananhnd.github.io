@@ -1,4 +1,6 @@
-import {Stack, Box, styled, Typography} from "@mui/material";
+import {EmailOutlined, GitHub, LinkedIn, Telegram} from "@mui/icons-material";
+import {Stack, Box, styled, Typography, Link} from "@mui/material";
+import {useTranslation} from "react-i18next";
 
 export const BoxSlide = styled(Stack)(({theme}) => ({
   justifyContent: "center",
@@ -15,37 +17,57 @@ export const BoxSlide = styled(Stack)(({theme}) => ({
 }));
 
 export default function Footer() {
+  const {t} = useTranslation();
   return (
-    <section>
+    <div>
+      <Stack sx={{gap: '16px', padding: '16px 0', marginBottom: 3, textAlign: 'center', alignItems: 'center'}}>
+        <Typography variant={'body2'}>
+          {t("footer.connect with me on")}
+        </Typography>
+        <Stack direction={'row'} gap={2} alignItems={'center'}>
+          <Link href={'https://github.com/vananhnd'} target={'_blank'} rel="noopener">
+            <GitHub sx={{fontSize: '37px', color: 'primary.main'}}/>
+          </Link>
+          <Link href={'https://www.linkedin.com/in/andv14/'} target={'_blank'} rel="noopener">
+            <LinkedIn sx={{fontSize: '40px', color: 'primary.main'}}/>
+          </Link>
+          <Link href={''} target={'_blank'} rel="noopener">
+            <Telegram sx={{fontSize: '42px', color: 'primary.main'}}/>
+          </Link>
+          <Link href={'mailto:dvanh4@gmail.com'} target={'_blank'} rel="noopener">
+            <EmailOutlined sx={{fontSize: '40px', color: 'primary.main'}}/>
+          </Link>
+        </Stack>
+      </Stack>
       <Box
         sx={{
           height: '50px',
-          // padding: {xs: '16px 0', sm: '20px 0 40px 0'},
-          overflowX: 'hidden',
+          overflowX: 'hidden', width:'100vw',
+          position:'relative',
           whiteSpace: 'nowrap'
         }}>
         <Typography variant={'h5'}
                     className={'animated-text-to-left'}
-                    sx={{fontWeight:800,}}>
+                    sx={{fontWeight: 800, color: 'text.secondary'}}>
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <span key={i}>
-                Thanks for visiting my portfolio &#x2661; {" "}
+                {t("footer.thanks-1")} ~ {" "}
             </span>
           ))}
         </Typography>
       </Box>
-      <Stack sx={{
-        overflowX: 'hidden',
-        whiteSpace: 'nowrap'
+      <Stack sx={{width:'100vw',
+        position:'relative',height: '50px',
+        overflowX: 'hidden', whiteSpace: 'nowrap',marginBottom: 20
       }}>
-        <Typography variant={'h5'} className={'animated-text-to-right'} sx={{display: 'inline-block',}}>
+        <Typography variant={'h5'} className={'animated-text-to-right'} sx={{color: 'text.secondary'}}>
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <span key={i}>
-                Code & Chill with 🤍 by Sora | {" "}
+                {t("footer.thanks-1")} {" "}&#x2661; {" "}
             </span>
           ))}
         </Typography>
       </Stack>
-    </section>
+    </div>
   );
 }

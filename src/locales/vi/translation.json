@@ -7,5 +7,10 @@
     "more about me": "Thêm về tôi",
     "impressive works": "Dự án ấn tượng",
     "impressive_works_desc": "Dưới đây là một số dự án nổi bật của tôi thể hiện kỹ năng và chuyên môn của tôi trong quá trình phát triển front-end."
+  },
+  "footer": {
+    "connect with me on": "Kết nối với tôi trên",
+    "thanks-1": "Cảm ơn bạn đã ghé thăm portfolio của tôi",
+    "thanks-2": "Code & Chill cùng Sora |"
   }
 }
