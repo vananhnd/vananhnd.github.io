@@ -46,13 +46,12 @@ export default function AboutMe() {
           </Box>
         </Stack>
       </Stack>
-      <div className="stars">
+      <Stack className="stars"/>
         {/*<div className="shooting-star"></div>*/}
         {/*<div className="shooting-star"></div>*/}
         {/*<div className="shooting-star"></div>*/}
         {/*<div className="shooting-star"></div>*/}
         {/*<div className="shooting-star"></div>*/}
-      </div>
     </Stack>
   )
 }

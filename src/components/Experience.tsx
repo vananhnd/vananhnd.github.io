@@ -7,21 +7,21 @@ export default function Experience() {
       id: 1,
       name: ' SPLabs',
       position: 'Frontend Developer',
-      tenure: 'Jun 2023 - Dec 2023',
+      tenure: '12/2023 - Present',
       bg: 'https://static.vecteezy.com/system/resources/previews/055/600/542/non_2x/abstract-background-with-a-purple-and-blue-light-vector.jpg',
       logo: 'https://splabs.info/images/logo-SPLabs.png'
     },
     {
-      id: 2, name: 'TrustCome',
-      position: 'Freelance Developer',
-      tenure: 'Jan 2023 - May 2023',
+      id: 2, name: 'TrustCom',
+      position: 'Freelance',
+      tenure: '9/2022 - 12/2022',
       bg: 'https://www.shutterstock.com/image-vector/abstract-blue-background-modern-simple-600nw-2474145007.jpg',
       logo: "/trustcom.webp"
     },
     {
-      id: 3, name: 'Viettel High Tech',
+      id: 3, name: 'VHT',
       position: 'Intern Developer',
-      tenure: 'Jun 2022 - Aug 2022',
+      tenure: '4/2020 - 5/2023',
       bg: 'https://giaiphapdoanhnghiepviettel.vn/uploads/2023/09/banner-slider-2-min.jpg',
       logo: 'https://viettelhightech.com/storage/icon/logo1.svg'
     },
@@ -61,23 +61,24 @@ export default function Experience() {
                      alt={item.name}
                 />
               </Stack>
-              <Typography variant={'h4'} fontWeight={700}>
+              <Typography variant={'h4'} textTransform={'uppercase'} fontFamily={"Roboto, monospace"}>
                 {item.position}
               </Typography>
               <Stack width={'100%'} direction={'row'} justifyContent={'space-between'}>
                 <Stack>
-                  <Typography variant={'caption'} fontWeight={700} color={'text.secondary'}>
+                  <Typography variant={'caption'} color={'text.secondary'} fontFamily={"SUSE Mono, monospace"}>
                     Company Name
                   </Typography>
-                  <Typography variant={'subtitle1'} color={'#fff'}>
+                  <Typography variant={'subtitle1'} color={'#fff'} textTransform={'capitalize'} fontWeight={500}
+                              fontFamily={"SUSE Mono, monospace"}>
                     {item.name}
                   </Typography>
                 </Stack>
                 <Stack>
-                  <Typography variant={'caption'} fontWeight={700} color={'text.secondary'}>
+                  <Typography variant={'caption'} color={'text.secondary'}>
                     Tenure
                   </Typography>
-                  <Typography variant={'subtitle1'}>
+                  <Typography variant={'subtitle1'} fontWeight={500} fontFamily={"SUSE Mono, monospace"}>
                     {item.tenure}
                   </Typography>
                 </Stack>

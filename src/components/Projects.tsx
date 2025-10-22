@@ -33,6 +33,7 @@ export function Projects() {
 
   return (
     <section id={'projects'}>
+      <Stack className="stars"/>
       <Grid container spacing={{xs: 2, md: 3, xl: 4}} px={{xs: 0, lg: 5, xl: 15}}
             data-aos="zoom-in-up" data-aos-duration="3000"
             sx={{position: 'relative'}}
@@ -61,9 +62,9 @@ export function Projects() {
           </Stack>
         </Grid>
       </Grid>
+
       <React.Fragment>
-        <Drawer
-          anchor={'bottom'}
+        <Drawer anchor={'bottom'}
           open={open} onClose={toggleDrawer}
         >
           <Box sx={{
@@ -73,7 +74,6 @@ export function Projects() {
             color: 'primary.main',
             backdropFilter: 'blur(5px)',
             borderRadius: '30px 30px 0 0',
-
           }}>
             <Stack direction={'row'} justifyContent={'space-between'}
                    alignItems={'center'}

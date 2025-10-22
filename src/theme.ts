@@ -88,6 +88,12 @@ const darkTheme = createTheme({
         fontSize: '2.4rem',
       },
     },
+    h4: {
+      letterSpacing:'2px',
+      [baseTheme.breakpoints.down('sm')]: {
+        fontSize: '1.25rem',
+      },
+    },
     h5: {
       [baseTheme.breakpoints.down('sm')]: {
         fontSize: '1rem',

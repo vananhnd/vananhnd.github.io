@@ -19,7 +19,7 @@ export const BoxSlide = styled(Stack)(({theme}) => ({
 export default function Footer() {
   const {t} = useTranslation();
   return (
-    <div>
+    <Box id={'footer'}>
       <Stack sx={{gap: '16px', padding: '16px 0', marginBottom: 3, textAlign: 'center', alignItems: 'center'}}>
         <Typography variant={'body2'}>
           {t("footer.connect with me on")}
@@ -68,6 +68,6 @@ export default function Footer() {
           ))}
         </Typography>
       </Stack>
-    </div>
+    </Box>
   );
 }
