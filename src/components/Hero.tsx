@@ -48,16 +48,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <Box sx={{
+    <Box id={'home'} sx={{
       backgroundImage: `url(${bg})`, backgroundRepeat: 'no-repeat',
-      backgroundSize: {xs: 'auto 100%', sm: 'cover'}, backgroundPosition: {xs: 'center', sm: 'center top'},
+      backgroundSize: {xs: 'auto 100%', sm: 'cover'}, backgroundPosition: {xs: 'center', sm:'center top'},
     }}
     >
       <Stack sx={{
         display: 'flex', flexDirection: 'column',
         height: '100vh', width: '100%', padding: '24px 32px',
         justifyContent: 'space-between', alignItems: 'center',
-        paddingBottom: '150px',
+        paddingBottom: {xs:'200px', sm:'120px'},
       }}
       >
         <Stack sx={{
@@ -73,11 +73,10 @@ export default function Hero() {
             }}
           >
             <Tooltip title={isPlaying ? "Pause music" : "Play music"} arrow>
-
               <IconButton onClick={toggleMusic}>
                 {isPlaying ?
                   <Box component={'img'}
-                       sx={{width: 25}}
+                       sx={{width: 20, height:20, opacity:0.8}}
                        src={"https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZzZ5OG5nbHl4ajd3MWMyb2ZmazB0dXg2cjg0NTQ1NXIwb2NkenN5byZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/h4OQjJLelp7IxQjN2Y/giphy.gif"}/>
                   :
                   <PlayCircleOutline sx={{fontSize:'28px'}}/>
@@ -93,8 +92,8 @@ export default function Hero() {
                 type="audio/mpeg"/>
             </audio>
             <Link href={'https://github.com/vananhnd'} target={'_blank'} rel="noopener">
-              <IconButton>
-                <GitHub/>
+              <IconButton className={'svg-button'}>
+                <GitHub className={'svg-path'}/>
               </IconButton>
             </Link>
             <Link href={'https://www.linkedin.com/in/andv14/'} target={'_blank'} rel="noopener">
@@ -107,7 +106,8 @@ export default function Hero() {
                 <Telegram sx={{fontSize: '28px'}}/>
               </IconButton>
             </Link>
-            <Stack direction={'row'} alignItems={'center'} gap={1} sx={{display: {xs: 'none', sm: 'flex'}}}>
+            <Stack direction={'row'} alignItems={'center'} gap={1}
+                   sx={{paddingLeft:3, display: {xs: 'none', sm: 'flex'}}}>
               <Typography variant={'h3'} fontWeight={700}>
                 {hhmm}
               </Typography>
@@ -126,15 +126,15 @@ export default function Hero() {
         <Stack>
           <Typography variant={'greeting'}
                       sx={{
-                        letterSpacing: '30px', transform: 'translateX(15px)',
-                        textShadow: '1px 1px 10px rgba(0, 0, 0, 0.2), 1px 1px 5px #0C0C0C40'
+                        fontFamily: "Krona One ,sans-serif",
+                        textShadow: '1px 1px 10px rgba(0, 0, 0, 0.1), 1px 1px 5px #0C0C0C1A'
                       }}>
-            <span>S</span>
-            <span>O</span>
-            <span>R</span>
-            <span>A</span>
+            S O R A
           </Typography>
-          <Typography className={'greeting-text'} variant={'greeting'}>
+          <Typography className={'greeting-text'} variant={'greeting'}
+                      sx={{opacity:0.8,
+                        textShadow: '0 0 2px rgba(255, 255, 255, 0.1), 0 0 2px rgba(0, 0, 0, 0.1)'
+          }}>
             <span key={index}>{greetings[index]}</span>
           </Typography>
         </Stack>

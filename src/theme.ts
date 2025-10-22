@@ -5,12 +5,14 @@ declare module '@mui/material/styles' {
   interface TypographyVariants {
     greeting: React.CSSProperties;
     title: React.CSSProperties;
+    position: React.CSSProperties;
   }
 
   // allow configuration using `createTheme()`
   interface TypographyVariantsOptions {
     greeting?: React.CSSProperties;
     title?: React.CSSProperties;
+    position?: React.CSSProperties;
   }
 }
 
@@ -19,6 +21,7 @@ declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     greeting: true;
     title: true;
+    position: true;
   }
 }
 const baseTheme = createTheme();
@@ -27,7 +30,6 @@ const darkTheme = createTheme({
     mode: 'dark',
     background: {
       default: '#121212', // General background color
-      // paper: '#ffffff',   // Background color for Paper components
     },
     primary: {
       main: '#121212',
@@ -53,13 +55,30 @@ const darkTheme = createTheme({
     },
     title: {
       fontSize: '3.75rem',
+      fontFamily: "Krona One ,sans-serif",
+      cursor: "default",
+      textAlign: 'center',
+      lineHeight: 1.2,
+      [baseTheme.breakpoints.down('md')]: {
+        fontSize: '3.5rem',
+      },
+      [baseTheme.breakpoints.down('sm')]: {
+        fontSize: '2rem',
+      },
+    },
+    position: {
+      fontSize: '3.75rem',
       fontWeight: 800,
       textAlign: 'center',
       lineHeight: 1.2,
+      [baseTheme.breakpoints.down('lg')]: {
+        fontSize: '3rem',
+      },
       [baseTheme.breakpoints.down('sm')]: {
-        fontSize: '3.5rem',
+        fontSize: '1.25rem',
       },
     },
+
     h3: {
       fontSize: '1.5rem',
       '@media (min-width:600px)': {
@@ -67,6 +86,22 @@ const darkTheme = createTheme({
       },
       [baseTheme.breakpoints.up('md')]: {
         fontSize: '2.4rem',
+      },
+    },
+    h5: {
+      [baseTheme.breakpoints.down('sm')]: {
+        fontSize: '1rem',
+      },
+    },
+    subtitle1: {
+      [baseTheme.breakpoints.down('sm')]: {
+        fontSize: '0.875rem',
+      },
+    },
+    caption: {
+      fontSize: '0.875rem',
+      [baseTheme.breakpoints.down('sm')]: {
+        fontSize: '0.75rem',
       },
     },
     body2: {
@@ -78,10 +113,25 @@ const darkTheme = createTheme({
     MuiSvgIcon: {
       styleOverrides: {
         root: {
-          color: '#fff', // Applies to all SvgIcon components
+          color: 'text.primary', // Applies to all SvgIcon components
         },
       },
     },
+    MuiButtonBase: {
+      styleOverrides: {
+        root: {
+          fontFamily: "Nunito, sans-serif",
+        }
+      }
+    },
+    MuiPaper:{
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent',
+          backgroundImage: 'none',
+        }
+      }
+    }
   },
 });
 

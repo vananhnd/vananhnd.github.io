@@ -24,6 +24,8 @@
     "react-dom": "^19.1.1",
     "react-i18next": "^16.0.0",
     "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^12.0.2",
     "tsparticles": "^3.9.1",
     "tsparticles-engine": "^2.12.0"
   },

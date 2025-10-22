@@ -58,7 +58,7 @@ export default function Footer() {
       </Box>
       <Stack sx={{width:'100vw',
         position:'relative',height: '50px',
-        overflowX: 'hidden', whiteSpace: 'nowrap',marginBottom: 20
+        overflowX: 'hidden', whiteSpace: 'nowrap',marginBottom: 16
       }}>
         <Typography variant={'h5'} className={'animated-text-to-right'} sx={{color: 'text.secondary'}}>
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (

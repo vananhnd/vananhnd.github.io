@@ -4,11 +4,10 @@ import darkTheme from "./theme.ts";
 import AOS from 'aos'
 import {useEffect} from "react";
 
-
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 3000,
       offset: 0,
     })
   })

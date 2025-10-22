@@ -6,11 +6,14 @@
     "my_passion": "Sự kết hợp giữa niềm đam mê thiết kế, phát triển và trải nghiệm người dùng liền mạch đặt tôi vào giao điểm của sự sáng tạo và công nghệ trong thế giới kỹ thuật số.",
     "more about me": "Thêm về tôi",
     "impressive works": "Dự án ấn tượng",
-    "impressive_works_desc": "Dưới đây là một số dự án nổi bật của tôi thể hiện kỹ năng và chuyên môn của tôi trong quá trình phát triển front-end."
+    "impressive_works_desc": "Dưới đây là một số dự án nổi bật của tôi thể hiện kỹ năng và chuyên môn của tôi trong quá trình phát triển front-end.",
+    "projects": "Dự án"
   },
   "footer": {
     "connect with me on": "Kết nối với tôi trên",
     "thanks-1": "Cảm ơn bạn đã ghé thăm portfolio của tôi",
     "thanks-2": "Code & Chill cùng Sora |"
-  }
+  },
+  "skills that fuel my passion": "Kỹ năng tiếp thêm đam mê của tôi",
+  "experiences": "Kinh nghiệm"
 }

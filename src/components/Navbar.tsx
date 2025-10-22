@@ -1,21 +1,36 @@
-import {ArrowOutward, Code, GitHub, HomeFilled } from "@mui/icons-material";
+import {Layers, Code, WorkOutline, InfoOutlined, HomeFilled } from "@mui/icons-material";
 import { Box, IconButton } from "@mui/material";
 
 export default function Navbar() {
+  const onLinkClick = (id: string) => {
+    document.getElementById(id)?.scrollIntoView();
+  }
+
   return (
     <Box className={'App-navbar'}>
-      <IconButton className={'skill-icons'}>
+      <IconButton onClick={()=> onLinkClick('home') } >
         <HomeFilled/>
       </IconButton>
-      <IconButton>
+      <IconButton onClick={()=> onLinkClick('about') } >
+        <InfoOutlined/>
+      </IconButton>
+      <IconButton onClick={()=> onLinkClick('projects') }>
         <Code/>
       </IconButton>
-      <IconButton>
-        <GitHub/>
+      <IconButton onClick={()=> onLinkClick('tech-stack') }>
+        <Layers/>
       </IconButton>
-      <IconButton>
-        <ArrowOutward/>
+      <IconButton onClick={()=> onLinkClick('experience') }>
+        <WorkOutline/>
       </IconButton>
+      {/*
+      <Button
+        endIcon={<ArrowOutward />}
+        className="text-button"
+      >
+        <Box component={'span'} display={{xs:'none', sm:'grid'}} >Let's Talk</Box>
+      </Button>
+      */}
     </Box>
   )
 }
