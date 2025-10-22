@@ -28,3 +28,4 @@ Thumbs.db
 
 # Vite specific
 .vite/
+.idea/workspace.xml

@@ -1,6 +1,6 @@
 import {Stack, IconButton, Typography, Link, Box, Tooltip} from "@mui/material";
 import {useEffect, useRef, useState} from "react";
-import LanguageSwitcher from "./LanguageSwitcher";
+// import LanguageSwitcher from "./LanguageSwitcher";
 import {GitHub, LinkedIn, PlayCircleOutline, Telegram} from "@mui/icons-material";
 
 export default function Hero() {
@@ -48,7 +48,7 @@ export default function Hero() {
 
   return (
     <Box id={'home'} sx={{
-      backgroundImage: `url("/bg.jpeg")`, backgroundRepeat: 'no-repeat',
+      backgroundImage: `url("/bg.jpg")`, backgroundRepeat: 'no-repeat',
       backgroundSize: {xs: 'auto 100%', sm: 'cover'}, backgroundPosition: {xs: 'center', sm:'center top'},
     }}
     >
@@ -63,7 +63,7 @@ export default function Hero() {
           display: 'flex', flexDirection: 'row', justifyContent: 'space-between',
           alignItems: 'center', width: '100%'
         }}>
-          <LanguageSwitcher/>
+          {/*<LanguageSwitcher/>*/}
           <Stack
             sx={{
               display: 'flex', flexDirection: 'row', justifyContent: 'flex-end',
@@ -82,7 +82,7 @@ export default function Hero() {
                 }
               </IconButton>
             </Tooltip>
-            <audio controls autoPlay loop
+            <audio controls autoPlay loop={true}
                    ref={audioRef}
                    style={{position: 'absolute', top: '-9999px', left: '-9999px', width: '0', height: '0'}}>
               <source
@@ -134,7 +134,7 @@ export default function Hero() {
                       sx={{opacity:0.8,
                         textShadow: '0 0 2px rgba(255, 255, 255, 0.1), 0 0 2px rgba(0, 0, 0, 0.1)'
           }}>
-            <span key={index}>{greetings[index]}</span>
+            <Typography key={index}>{greetings[index]}</Typography>
           </Typography>
         </Stack>
       </Stack>
