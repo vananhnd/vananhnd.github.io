@@ -1,6 +1,5 @@
 import {Box, Grid, Stack, Typography} from "@mui/material";
 import Title from "./Title";
-import trustcom from "../assets/trustcom.webp";
 
 export default function Experience() {
   const events = [
@@ -17,7 +16,7 @@ export default function Experience() {
       position: 'Freelance Developer',
       tenure: 'Jan 2023 - May 2023',
       bg: 'https://www.shutterstock.com/image-vector/abstract-blue-background-modern-simple-600nw-2474145007.jpg',
-      logo: trustcom
+      logo: "/trustcom.webp"
     },
     {
       id: 3, name: 'Viettel High Tech',

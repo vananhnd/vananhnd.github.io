@@ -1,5 +1,4 @@
 import {Stack, IconButton, Typography, Link, Box, Tooltip} from "@mui/material";
-import bg from '../assets/bg.jpg';
 import {useEffect, useRef, useState} from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import {GitHub, LinkedIn, PlayCircleOutline, Telegram} from "@mui/icons-material";
@@ -49,7 +48,7 @@ export default function Hero() {
 
   return (
     <Box id={'home'} sx={{
-      backgroundImage: `url(${bg})`, backgroundRepeat: 'no-repeat',
+      backgroundImage: `url("/bg.jpeg")`, backgroundRepeat: 'no-repeat',
       backgroundSize: {xs: 'auto 100%', sm: 'cover'}, backgroundPosition: {xs: 'center', sm:'center top'},
     }}
     >

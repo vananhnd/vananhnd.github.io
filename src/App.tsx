@@ -1,6 +1,6 @@
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import Home from "./pages/Home";
-import darkTheme from "./theme.ts";
+import darkTheme from "./theme";
 import AOS from 'aos'
 import {useEffect} from "react";
 

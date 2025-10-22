@@ -1,5 +1,5 @@
-import {Projects} from "../components/Projects.tsx";
-import TechStack from "../components/TechStack.tsx";
+import {Projects} from "../components/Projects";
+import TechStack from "../components/TechStack";
 import Footer from "../components/Footer";
 import React from "react";
 import AboutMe from "../components/AboutMe";
