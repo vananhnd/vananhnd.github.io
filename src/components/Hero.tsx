@@ -82,14 +82,14 @@ export default function Hero() {
                 }
               </IconButton>
             </Tooltip>
-            <audio controls autoPlay loop={true}
+            <Box component={'audio'} controls autoPlay loop={true}
                    ref={audioRef}
                    style={{position: 'absolute', top: '-9999px', left: '-9999px', width: '0', height: '0'}}>
-              <source
+              <Box component={'source'}
                 // src="https://dl.dropboxusercontent.com/s/eyb9txkepv0azqx/Beethoven%20-%20Variations%20on%20Ein%20M%C3%A4dchen%20oder%20Weibchen.mp3?dl=0"
                 src="https://audio.jukehost.co.uk/7SbhkvaG8EIXxPm0wxJbehDXDk5tWaSv"
                 type="audio/mpeg"/>
-            </audio>
+            </Box>
             <Link href={'https://github.com/vananhnd'} target={'_blank'} rel="noopener">
               <IconButton className={'svg-button'}>
                 <GitHub className={'svg-path'}/>
@@ -134,7 +134,7 @@ export default function Hero() {
                       sx={{opacity:0.8,
                         textShadow: '0 0 2px rgba(255, 255, 255, 0.1), 0 0 2px rgba(0, 0, 0, 0.1)'
           }}>
-            <Typography key={index}>{greetings[index]}</Typography>
+            <Box component={'span'} key={index}>{greetings[index]}</Box>
           </Typography>
         </Stack>
       </Stack>
